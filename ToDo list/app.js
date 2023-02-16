@@ -51,6 +51,7 @@ const createDeleteElements = (value) => {
     finishedTaskCounter++;
     finishedTaskCount.textContent = `Finished Tasks : #${finishedTaskCounter}`;
 
+//Remove item from the list by clicking on the item
     finishedLi.addEventListener('click', () => {
       finishedLi.remove();
       finishedTaskCounter--;
