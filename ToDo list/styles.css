@@ -1,5 +1,8 @@
 body {
-  background-color: rgb(46, 60, 71);
+  background-image: linear-gradient(to right, #20093a77, #686b6950, #030303),
+    url('getty_514914078_200013332000928076_167571.jpg');
+  background-position: right;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -21,7 +24,7 @@ body {
   padding: 12px;
   border-radius: 10px;
   border: none;
-  background-color: rosybrown;
+  background-color: rgb(188, 143, 143);
 }
 
 ul {
@@ -34,18 +37,19 @@ li {
   margin: 0 auto;
   list-style-type: none;
   padding: 13px;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  border: 1px solid black;
-  border-radius: 10px;
+  background: linear-gradient(#866dd3d7, #2e3c47);
+  border: 2px solid black;
+  border-radius: 8px;
   margin-bottom: 13px;
   width: 40%;
   word-wrap: break-word;
   animation: list 1s;
   text-transform: uppercase;
+  font-size: 20px;
 }
 
 #btn {
-  background-color: rgb(12, 158, 32);
+  background-color: rgba(12, 158, 31, 0.658);
   color: #fff;
   width: 4rem;
   border: 2px solid black;
@@ -81,7 +85,7 @@ li {
 
 #count {
   font-size: 70px;
-  color: #09080cbb;
+  color: #000000b7;
   text-decoration: underline;
   animation: taskcount 1s;
 }
@@ -91,6 +95,38 @@ li {
   color: #876dd3bb;
   text-transform: uppercase;
   animation: name 1s;
+}
+
+.finishedTasks {
+  padding-top: 200px;
+  font-size: 30px;
+  color: #09080c;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+
+  animation: taskcount 1s;
+}
+
+#finishedTaskText {
+  align-self: center;
+}
+
+.finishedLi {
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 100;
+  width: 40%;
+  cursor: pointer;
+}
+
+.finishedLi::after {
+  content: '\2713';
+  float: right;
+  margin-right: 10px;
+  color: rgba(138, 224, 8, 0.582);
 }
 
 @keyframes gradient {
