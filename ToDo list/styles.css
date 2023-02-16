@@ -25,6 +25,8 @@ body {
   border-radius: 10px;
   border: none;
   background-color: rgb(188, 143, 143);
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
 
 ul {
@@ -46,6 +48,8 @@ li {
   animation: list 1s;
   text-transform: uppercase;
   font-size: 20px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
 
 #btn {
@@ -56,6 +60,7 @@ li {
   border-radius: 10px;
   transition: all 0.2s ease-in;
   cursor: pointer;
+  
 }
 #btn:hover {
   transform: scale(1.05);
@@ -71,6 +76,8 @@ li {
   border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
 
 .editBtn {
@@ -81,6 +88,8 @@ li {
   border: 1px solid black;
   border-radius: 5px;
   cursor: pointer;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
 
 #count {
@@ -88,6 +97,8 @@ li {
   color: #000000b7;
   text-decoration: underline;
   animation: taskcount 1s;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
 
 .name {
@@ -95,6 +106,8 @@ li {
   color: #876dd3bb;
   text-transform: uppercase;
   animation: name 1s;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
 
 .finishedTasks {
@@ -106,12 +119,15 @@ li {
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
   animation: taskcount 1s;
 }
 
 #finishedTaskText {
   align-self: center;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
 
 .finishedLi {
