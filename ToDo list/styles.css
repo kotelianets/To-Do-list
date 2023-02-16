@@ -1,0 +1,145 @@
+body {
+  background-color: rgb(46, 60, 71);
+  height: 100vh;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 3rem;
+}
+
+#input {
+  text-transform: uppercase;
+  width: 25%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: rosybrown;
+}
+
+ul {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+li {
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 13px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 13px;
+  width: 40%;
+  word-wrap: break-word;
+  animation: list 1s;
+  text-transform: uppercase;
+}
+
+#btn {
+  background-color: rgb(12, 158, 32);
+  color: #fff;
+  width: 4rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+#btn:hover {
+  transform: scale(1.05);
+}
+#btn:active {
+  transform: scale(0.95);
+}
+
+.btn-remove {
+  float: right;
+  background-color: rgba(255, 0, 0, 0.651);
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editBtn {
+  float: right;
+  margin-right: 5px;
+  background-color: rgb(53, 184, 36);
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#count {
+  font-size: 70px;
+  color: #09080cbb;
+  text-decoration: underline;
+  animation: taskcount 1s;
+}
+
+.name {
+  font-size: 70px;
+  color: #876dd3bb;
+  text-transform: uppercase;
+  animation: name 1s;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes taskcount {
+  0% {
+    transform: translateX(-25px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes name {
+  0% {
+    transform: translateX(25px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes list {
+  0% {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
