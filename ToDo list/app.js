@@ -2,7 +2,10 @@ const input = document.getElementById('input');
 const button = document.getElementById('btn');
 const list = document.getElementById('list');
 const counter = document.getElementById('count');
+const finishedTaskList = document.getElementById('finishedList');
+const finishedTaskCount = document.getElementById('finishedTaskText');
 let taskCount = 0;
+let finishedTaskCounter = 0;
 
 function addTask() {
   if (input.value === '') {
@@ -39,6 +42,20 @@ const createDeleteElements = (value) => {
   edit.addEventListener('click', () => {
     li.style.textDecoration = 'line-through';
     li.style.fontStyle = 'italic';
+    li.removeChild(edit);
+
+    const finishedLi = document.createElement('li');
+    finishedLi.className = 'finishedLi';
+    finishedLi.textContent = value;
+    finishedTaskList.appendChild(finishedLi);
+    finishedTaskCounter++;
+    finishedTaskCount.textContent = `Finished Tasks : #${finishedTaskCounter}`;
+
+    finishedLi.addEventListener('click', () => {
+      finishedLi.remove();
+      finishedTaskCounter--;
+      finishedTaskCount.textContent = `Finished Tasks : #${finishedTaskCounter}`;
+    });
   });
 
   //Remove Task
@@ -51,7 +68,7 @@ const createDeleteElements = (value) => {
   list.appendChild(li);
 
   //Total Tasks count
-  counter.textContent = `Total Tasks : ${taskCount}`;
+  counter.textContent = `Total Tasks : #${taskCount}`;
 };
 
 button.addEventListener('click', addTask);
